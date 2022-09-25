@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th ="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+<h1  class="text-center text-primary">Nhập thông tin sản phẩm</h1>
+
+<form th:object="${product}" method="post" class="container" action="show-product">
+  <div class="mb-3">
+    <input class="form-control" th:field="*{name}"  placeholder="Ten San Pham">
+    <label class="form-text text-danger" th:text="${nameProduct}" ></label>
+
+  </div>
+  <div class="mb-3">
+    <input class="form-control" th:field="*{price}"  placeholder="Gia San Pham">
+    <label class="form-text text-danger" th:text="${priceProduct}" ></label>
+
+  </div>
+  <div class="mb-3">
+    <input class="form-control" th:field="*{quantity}"  placeholder="So Luong">
+    <label class="form-text text-danger" th:text="${quantity}"></label>
+  </div>
+  <button  type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</body>
+</html>

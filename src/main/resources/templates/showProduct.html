@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th ="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+  <h1>Thông tin sản phẩm</h1>
+
+  Name : <label class="form-text text-danger" th:text="${name}" ></label>
+  <br>
+
+  Price:  <label class="form-text text-danger" th:text="${price}" ></label>
+  <br>
+
+  Quantity :   <label class="form-text text-danger" th:text="${quantity}"></label>
+    <br>
+
+  Pay :   <label class="form-text text-danger" th:text="${pay}"></label>
+    <br>
+
+  datePay :  <label class="form-text text-danger" th:text="${datePay}"></label>
+</div>
+
+</body>
+</html>

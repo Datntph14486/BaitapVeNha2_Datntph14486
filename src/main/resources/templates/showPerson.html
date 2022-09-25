@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th ="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+  <h1>Thông tin cá nhân</h1>
+
+  Name : <label class="form-text text-danger" th:text="${name}" ></label>
+    <br>
+
+  YearOfBirth:  <label class="form-text text-danger" th:text="${myYearOfBirth}" ></label>
+    <br>
+
+  Address :   <label class="form-text text-danger" th:text="${address}"></label>
+</div>
+
+
+
+</body>
+</html>

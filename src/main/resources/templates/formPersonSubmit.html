@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th ="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Title</title>
+</head>
+<body>
+<h1  class="text-center text-primary">Nhập thông tin người dùng</h1>
+
+ <form th:object="${person}" method="post" class="container" action="show-person">
+     <div class="mb-3">
+         <input class="form-control" th:field="*{name}"  placeholder="name">
+         <label class="form-text text-danger" th:text="${name}" ></label>
+
+     </div>
+     <div class="mb-3">
+         <input class="form-control" th:field="*{yearOfBirth}"  placeholder="yearOfBirth">
+         <label class="form-text text-danger" th:text="${yearOfBirth}" ></label>
+
+     </div>
+     <div class="mb-3">
+         <input class="form-control" th:field="*{address}"  placeholder="address">
+         <label class="form-text text-danger" th:text="${address}"></label>
+     </div>
+     <button  type="submit" class="btn btn-primary">Submit</button>
+ </form>
+</body>
+</html>
